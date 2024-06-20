@@ -98,13 +98,10 @@ class AttrdictSubSymbol:
         return AttrdictSubSymbol(name, self)
 
     def __matmul__(self: Self, target: Attrdict) -> Self:
-        end = len(self.__path) - 1
         for i, key in enumerate(self.__path):
-            target = target[key]
-
-            if target is AttrdictNone:
-                return AttrdictNone
-            if not isinstance(target, Attrdict) and i != end:
+            if isinstance(target, Attrdict):
+                target = target[key]
+            else:
                 return AttrdictNone
         return target
 
