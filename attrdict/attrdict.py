@@ -1,6 +1,8 @@
 import sys
 
-if (3, 5) < sys.version_info < (3, 11):
+if sys.version_info < (3, 5):
+    raise ValueError("This module requires at least Python 3.5")
+elif sys.version_info < (3, 11):
     from typing import Any, final, TypeVar
 
     Self = TypeVar("Self")
