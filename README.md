@@ -5,9 +5,9 @@ A simple way to access dictionary keys as attributes.
 example:
 
 ```python-repl
-from attrdict import Attrdict, AttrdictNone, AttrdictSymbol as Sym
+from attrdict import AttrdictNone, AttrdictSymbol as Sym
 
-example=Attrdict(a=1,b=dict(c=2,d=3))
+example=dict(a=1,b=dict(c=2,d=3))
 
 tmp=Sym.a.b @ example
 if tmp is AttrdictNone:

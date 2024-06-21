@@ -1,1 +1,1 @@
-from .attrdict import Attrdict, AttrdictNone, AttrdictSymbol
+from .attrdict import AttrdictNone, AttrdictSymbol
